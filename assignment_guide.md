@@ -1,8 +1,18 @@
 # Track Robot's Trajectory
 
-We will set up a odometry system for our robot and track the travel history of it.
+## Overview
+Just as the spinal cord handles immediate reflexes, your Pico is responsible for the low-level hardware: reading the "secrets" of your sensors and driving the actuators. 
+However, the Computer (the Brain) needs to hear those stories to make high-level decisions.
 
-## Instructions
+Without a communication line, the Brain is isolated from the Body. 
+In this assignment, you will build that nervous system for your robot by setting up serial communication between a Pico and a computer.
+
+- Build a circuit (on breadboard) around the Pico to work with an LED and an SR-HC04 ultrasonic distance sensor.
+- Establish physical communication paths between the Pico and the computer.
+- Develope a MicroPython script on Pico to transmit data to and receive data from the computer.
+- Develop a Python script on your computer to transmit data to and receive data from Pico.
+
+## Get Started
 
 ### 1. Software Setup
 
