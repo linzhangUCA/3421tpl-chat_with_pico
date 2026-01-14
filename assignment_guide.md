@@ -26,10 +26,22 @@ In this assignment, you will build that nervous system for your robot by setting
 | **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
 | **(Optional) Breadboard** | 1 | Host the circuit |
 
+> [!TIP]
+> If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
+
+### Prepare the software
+- Python3: install it on your computer (The linux laptop and Raspberry Pi 5 came with it).
+- [Thonny IDE](https://thonny.org/) or [VS Code](https://code.visualstudio.com/): Python coding environment on the computer.
+- [MicroPython firmware](https://micropython.org/download/RPI_PICO2/): on Pico(2).
+- [picozero](https://picozero.readthedocs.io/en/latest/) library or [`distance_sensor`](https://github.com/linzhangUCA/r1b_control/blob/main/ultrasonic_sense/distance_sensor.py) module: on Pico(2)
+- [pyserial](https://pypi.org/project/pyserial/) library: on the computer.
 
 
 > [!TIP]
-> If you forgot wiring, please review previous [slides](https://linzhanguca.github.io/robotics1-2025)
+> - [MicroPico](https://marketplace.visualstudio.com/items?itemName=paulober.pico-w-go) is a handy extension if you pick VS Code as your coding environment.
+> - Be aware which device your code is running on.
+For examples, if you get an error message like "_`machine`_ is not found". You may try to run a MicroPython script on your computer.
+In another case, if "_`serial` is not found_" prompted, then you are very likely running a Python script on the Pico.   
 
 > - For Pico sitting on the PCB, find scripts in [r1b_control](https://github.com/linzhangUCA/r1b_control)
 > - For Pico sitting on the breadboard, find scripts in [3421example-motor_control](https://github.com/linzhangUCA/3421example-motor_control)
