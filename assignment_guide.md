@@ -42,6 +42,10 @@ In this assignment, you will build that nervous system for your robot by setting
 > - Be aware which device your code is running on.
 For examples, if you get an error message like "_`machine`_ is not found". You may try to run a MicroPython script on your computer.
 In another case, if "_`serial` is not found_" prompted, then you are very likely running a Python script on the Pico.   
+> - If your Linux machine (the laptop or the RPi) refuse to talk to the Pico, try following command in the terminal then reboot.
+```console
+sudo usermod -aG dialout $USER
+```
 
 > - For Pico sitting on the PCB, find scripts in [r1b_control](https://github.com/linzhangUCA/r1b_control)
 > - For Pico sitting on the breadboard, find scripts in [3421example-motor_control](https://github.com/linzhangUCA/3421example-motor_control)
