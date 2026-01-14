@@ -14,7 +14,7 @@ In this assignment, you will build that nervous system for your robot by setting
 
 ## Get Started
 
-### List of Hardware:
+### 1. List of Hardware:
 | Item | Quantity | Description |
 | :--- | :---: | :--- |
 | **Computer** | 1 | Desktop/Laptop/SBC (the brain) |
@@ -29,7 +29,7 @@ In this assignment, you will build that nervous system for your robot by setting
 > [!TIP]
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
 
-### Prepare the software
+### 2. Prepare the software
 - Python3: install it on your computer (The linux laptop and Raspberry Pi 5 came with it).
 - [Thonny IDE](https://thonny.org/) or [VS Code](https://code.visualstudio.com/): Python coding environment on the computer.
 - [MicroPython firmware](https://micropython.org/download/RPI_PICO2/): on Pico(2).
@@ -47,6 +47,7 @@ In another case, if "_`serial` is not found_" prompted, then you are very likely
 sudo usermod -aG dialout $USER
 ```
 
+## Requirements
 > - For Pico sitting on the PCB, find scripts in [r1b_control](https://github.com/linzhangUCA/r1b_control)
 > - For Pico sitting on the breadboard, find scripts in [3421example-motor_control](https://github.com/linzhangUCA/3421example-motor_control)
 
