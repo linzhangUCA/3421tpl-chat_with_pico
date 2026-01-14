@@ -20,9 +20,9 @@ In this assignment, you will build that nervous system for your robot by setting
 | **Computer** | 1 | Desktop/Laptop/SBC (the brain) |
 | **Raspberry Pi Pico** | 1 | Microcontroller dev board (the spinal cord) |
 | **HC-SR04 Module** | 1 | Ultrasonic distance sensor |
-| **LED** | 1 | 5mm LED |
-| **Resistor** | Sevral | limit current, divide voltage |
-| **Jumper Wires** | Several |  |
+| **(Optional) LED** | 1 | 5mm LED |
+| **(Optional) Resistor** | Sevral | limit current, divide voltage |
+| **(Optional) Jumper Wires** | Several |  |
 | **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
 | **(Optional) Breadboard** | 1 | Host the circuit |
 
@@ -46,6 +46,8 @@ sudo usermod -aG dialout $USER
 
 ## Requirements
 ### Circuit
+Wire up the distance sensor and the LED with the Pico. 
+Make sure these components are functional.
 
 - Build the circuit around the Pico and display your wiring diagram in [README](README.md).
 > [!IMPORTANT]
@@ -58,6 +60,11 @@ sudo usermod -aG dialout $USER
 > [!TIP]
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
 
+### Pico Messenger
+- Send the latest detected distance to the computer at a frequency of 50Hz.
+- Receive message from the computer.
+- Light up the LED if and only if 9 is the command given by the computer.
+Turn off the LED if and only if 0 is the command given by the computer. 
 
 ## AI Policies
 
