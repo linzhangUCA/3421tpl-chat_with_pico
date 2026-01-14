@@ -26,7 +26,7 @@ In this assignment, you will build that nervous system for your robot by setting
 | **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
 | **(Optional) Breadboard** | 1 | Host the circuit |
 
-### 2. Prepare the software
+### 2. Prepare the Software
 - Python3: install it on your computer (The linux laptop and Raspberry Pi 5 came with it).
 - [Thonny IDE](https://thonny.org/) or [VS Code](https://code.visualstudio.com/): Python coding environment on the computer.
 - [MicroPython firmware](https://micropython.org/download/RPI_PICO2/): on Pico(2).
@@ -43,6 +43,8 @@ In another case, if "_`serial` is not found_" prompted, then you are very likely
 sudo usermod -aG dialout $USER
 ```
 
+### 3. Plan Communication Speed
+Please read the following requirements to figure out speed of the communication and plan the schedule accordingly.
 
 ## Requirements
 ### Circuit
@@ -59,6 +61,12 @@ Make sure these components are functional.
 
 > [!TIP]
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
+
+### Pico Messenger
+- Send the latest detected distance to the computer at a frequency of 50Hz.
+- Receive message from the computer.
+- Light up the LED if and only if 9 is the command given by the computer.
+Turn off the LED if and only if 0 is the command given by the computer. 
 
 ### Pico Messenger
 - Send the latest detected distance to the computer at a frequency of 50Hz.
