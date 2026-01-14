@@ -1,4 +1,4 @@
-# Track Robot's Trajectory
+# Assignment Guide
 
 ## Overview
 Just as the spinal cord handles immediate reflexes, your Pico is responsible for the low-level hardware: reading the "secrets" of your sensors and driving the actuators. 
@@ -7,21 +7,30 @@ However, the Computer (the Brain) needs to hear those stories to make high-level
 Without a communication line, the Brain is isolated from the Body. 
 In this assignment, you will build that nervous system for your robot by setting up serial communication between a Pico and a computer.
 
-- Build a circuit (on breadboard) around the Pico to work with an LED and an SR-HC04 ultrasonic distance sensor.
+- Build a circuit around the Pico to work with an LED and an SR-HC04 ultrasonic distance sensor.
 - Establish physical communication paths between the Pico and the computer.
 - Develope a MicroPython script on Pico to transmit data to and receive data from the computer.
 - Develop a Python script on your computer to transmit data to and receive data from Pico.
 
 ## Get Started
 
-### 1. Software Setup
+### List of Hardware:
+| Item | Quantity | Description |
+| :--- | :---: | :--- |
+| **Computer** | 1 | Desktop/Laptop/SBC (the brain) |
+| **Raspberry Pi Pico** | 1 | Microcontroller dev board (the spinal cord) |
+| **HC-SR04 Module** | 1 | Ultrasonic distance sensor |
+| **LED** | 1 | 5mm LED |
+| **Resistor** | Sevral | limit current, divide voltage |
+| **Jumper Wires** | Several |  |
+| **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
+| **(Optional) Breadboard** | 1 | Host the circuit |
 
-1. Upload the MicroPython's differential drive control suite to your Pico.
-2. (Optional) Tweak `wheel_sep` in "diff_drive_controller.py".
-3. (Optional) Tune PID parameters for better controlling the wheels.
 
-> [!NOTE]
->
+
+> [!TIP]
+> If you forgot wiring, please review previous [slides](https://linzhanguca.github.io/robotics1-2025)
+
 > - For Pico sitting on the PCB, find scripts in [r1b_control](https://github.com/linzhangUCA/r1b_control)
 > - For Pico sitting on the breadboard, find scripts in [3421example-motor_control](https://github.com/linzhangUCA/3421example-motor_control)
 
