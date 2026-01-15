@@ -87,7 +87,7 @@ Toggle the state of the LED in each outgoing message.
 
 
 ### 2.4. Data Transfer Limit
-Let's assume the serial data transfer baudrate is set to your Bear ID number.
+Let's assume the serial data transfer baudrate is set to first 5 digits of your Bear ID number (starting at 1).
 What would be the fastest rate/frequency you can use to repeatedly send the message below?
 
 ```text
