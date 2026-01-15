@@ -44,8 +44,8 @@ sudo usermod -aG dialout $USER
 ```
 
 ### 1.3. Plan Communication Speed
-Please read the following requirements to figure out speed of the communication and plan the schedule accordingly.
-
+Please read the following section to figure out the speed of the communication and plan the schedule accordingly.
+In the end, you can also practice planning the overall communication rate using the UART protocal.
 
 ## 2. Requirements
 ### 2.1. Circuit
@@ -87,8 +87,10 @@ Toggle the state of the LED in each outgoing message.
 
 
 ### 2.4. Data Transfer Limit
-Let's assume the serial data transfer baudrate is set to first 5 digits of your Bear ID number (starting at 1).
-What would be the fastest rate/frequency you can use to repeatedly send the message below?
+Let's assume you are setting up the communication between two devices using the the universal asynchronous receiver-transmitter (UART) protocal.
+The baudrate of this communication is set to first 5 digits of your Bear ID number (starting at 1).
+- Please do your research, find out how many bits are required to send 1 byte of data under the UART protocol.
+- Based on your finding, what would be the fastest rate/frequency you can use to repeatedly send the message below using the [UTF-8](https://www.charset.org/utf-8)?
 
 ```text
 I ♥️ UCA! Go Bears!
