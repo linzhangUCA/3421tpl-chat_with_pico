@@ -97,8 +97,8 @@ I ♥️ UCA! Go Bears!
 ```
 
 > [!TIP]
-> UTF-8 encodes whitespaces.
-
+> - UTF-8 encodes whitespaces.
+> - [Emojis](https://gist.github.com/rxaviers/7360908) are encoded differently.
 
 ## AI Policies
 
