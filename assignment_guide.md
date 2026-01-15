@@ -63,16 +63,24 @@ Make sure these components are functional.
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
 
 ### Pico Messenger
-- Send the latest detected distance to the computer at a frequency of 50Hz.
-- Receive message from the computer.
-- Light up the LED if and only if 9 is the command given by the computer.
-Turn off the LED if and only if 0 is the command given by the computer. 
+- Send the latest detected distance to the computer at the frequency of 50Hz.
+Please round the distance value to 4 decimal places.
+- Receive message from the computer the USB line is occupied (should be receiving a message every 5 seconds).
+  - Light up the LED if and only if "on" is the message.
+  - Turn off the LED if and only if "off" is the message. 
 
-### Pico Messenger
-- Send the latest detected distance to the computer at a frequency of 50Hz.
-- Receive message from the computer.
-- Light up the LED if and only if 9 is the command given by the computer.
-Turn off the LED if and only if 0 is the command given by the computer. 
+> [!TIP]
+> You may want to save the MicroPython script as `main.py` or the Python shell in Thonny will take over the serial line and prevent your Python script chatting with Pico.
+
+### Computer Messenger
+- Send LED control message at the frequency of 5Hz.
+Toggle the state of the LED in each outgoing message.
+  - Print outgoing message with time stamp (keep 2 decimals in seconds) for debugging.
+- Receive message from Pico whenever the USB line is not empty (should be receiving a message every 20 milliseconds).
+  - Print each received message with the time stamp (keep 2 decimals in seconds).
+
+> [!TIP]
+> Plug in the `main.py` loaded Pico, then execute the Python script.
 
 ## AI Policies
 
