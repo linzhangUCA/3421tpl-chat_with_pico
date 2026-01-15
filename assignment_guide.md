@@ -48,7 +48,7 @@ Please read the following section to figure out the speed of the communication a
 In the end, you can also practice planning the overall communication rate using the UART protocal.
 
 ## 2. Requirements
-### 2.1. Circuit
+### 2.1. (20%) Circuit
 Wire up the distance sensor and the LED with the Pico. 
 Make sure these components are functional.
 
@@ -64,40 +64,40 @@ Make sure these components are functional.
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
 
 
-### 2.2. Pico Messenger
+### 2.2. (35%) Pico Messenger
 - Send the latest detected distance to the computer at the frequency of 50Hz.
 Please round the distance value to 4 decimal places.
 - Receive message from the computer the USB line is occupied (should be receiving a message every 5 seconds).
-  - Light up the LED if and only if "on" is the message.
-  - Turn off the LED if and only if "off" is the message. 
+  - Light up the LED if and only if "on" is the message received.
+  - Turn off the LED if and only if "off" is the message received. 
 
 > [!TIP]
 > You may want to save the MicroPython script as `main.py` or the Python shell in Thonny will take over the serial line and prevent your Python script chatting with Pico.
 
 
-### 2.3. Computer Messenger
-- Send LED control message at the frequency of 5Hz.
-Toggle the state of the LED in each outgoing message.
-  - Print outgoing message with time stamp (keep 2 decimals in seconds) for debugging.
-- Receive message from Pico whenever the USB line is not empty (should be receiving a message every 20 milliseconds).
-  - Print each received message with the time stamp (keep 2 decimals in seconds).
+### 2.3. (30%) Computer Messenger
+- (15%) Send LED control message at the frequency of 5Hz.
+Toggle the state of the LED in each outgoing message using either "on" or "off".
+- (15%) Receive message from Pico whenever the USB line is not empty (should be receiving a message every 20 milliseconds).
 
 > [!TIP]
-> Plug in the `main.py` loaded Pico, then execute the Python script.
+> - Plug in the `main.py` loaded Pico, then execute the Python script.
+> - Print outgoing message with time stamp for debugging the computer talker.
+> - Print each received message with the time stamp for debugging the Pico talker.
 
-
-### 2.4. Data Transfer Limit
+### 2.4. (15%) Data Transfer Limit
 Let's assume you are setting up the communication between two devices using the the universal asynchronous receiver-transmitter (UART) protocal.
-The baudrate of this communication is set to first 5 digits of your Bear ID number (starting at 1).
+The baudrate of this communication is set to **first 5 digits of your Bear ID number (starting at 1)**.
 - Please do your research, find out how many bits are required to send 1 byte of data under the UART protocol.
 - Based on your finding, what would be the fastest rate/frequency you can use to repeatedly send the message below using the [UTF-8](https://www.charset.org/utf-8)?
-
+- Please document your reasoning and calculation in [README](README.md)
+  
 ```text
 I ♥️ UCA! Go Bears!
 ```
 
-> [!NOTE]
-> Please document your reasoning and calculation in [README](README.md).
+> [!TIP]
+> UTF-8 encodes whitespaces.
 
 
 ## AI Policies
