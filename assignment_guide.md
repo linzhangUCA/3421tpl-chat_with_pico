@@ -72,7 +72,8 @@ Please round the distance value to 4 decimal places.
   - Turn off the LED if and only if "off" is the message received. 
 
 > [!TIP]
-> You may want to save the MicroPython script as `main.py` or the Python shell in Thonny will take over the serial line and prevent your Python script chatting with Pico.
+> - You can use the [pico_chatter.py](pico_chatter.py) to get started.
+> - You may want to save the MicroPython script as `main.py` or the Python shell in Thonny will take over the serial line and prevent your Python script chatting with Pico.
 
 
 ### 2.3. (30%) Computer Messenger
@@ -81,6 +82,7 @@ Toggle the state of the LED in each outgoing message using either "on" or "off".
 - (15%) Receive message from Pico whenever the USB line is not empty (should be receiving a message every 20 milliseconds).
 
 > [!TIP]
+> - You can use the [computer_chatter.py](computer_chatter.py) to get started.
 > - Plug in the `main.py` loaded Pico, then execute the Python script.
 > - Print outgoing message with time stamp for debugging the computer talker.
 > - Print each received message with the time stamp for debugging the Pico talker.
