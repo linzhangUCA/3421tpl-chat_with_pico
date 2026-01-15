@@ -1,6 +1,6 @@
 # Assignment Guide
 
-## Overview
+## 1. Overview
 Just as the spinal cord in a human's body handles immediate reflexes, your Pico is responsible for the low-level hardware: reading the "secrets" of your sensors and driving the actuators. 
 However, the Computer (the "brain") needs to hear those stories to make high-level decisions.
 
@@ -14,7 +14,7 @@ In this assignment, you will build that nervous system for your robot by setting
 
 ## Get Started
 
-### 1. List of Hardware:
+### 1.1. List of Hardware:
 | Item | Quantity | Description |
 | :--- | :---: | :--- |
 | **Computer** | 1 | Desktop/Laptop/SBC (the brain) |
@@ -26,7 +26,7 @@ In this assignment, you will build that nervous system for your robot by setting
 | **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
 | **(Optional) Breadboard** | 1 | Host the circuit |
 
-### 2. Prepare the Software
+### 1.2. Prepare the Software
 - Python3: install it on your computer (The linux laptop and Raspberry Pi 5 came with it).
 - [Thonny IDE](https://thonny.org/) or [VS Code](https://code.visualstudio.com/): Python coding environment on the computer.
 - [MicroPython firmware](https://micropython.org/download/RPI_PICO2/): on Pico(2).
@@ -43,11 +43,12 @@ In another case, if "_`serial` is not found_" prompted, then you are very likely
 sudo usermod -aG dialout $USER
 ```
 
-### 3. Plan Communication Speed
+### 1.3. Plan Communication Speed
 Please read the following requirements to figure out speed of the communication and plan the schedule accordingly.
 
-## Requirements
-### Circuit
+
+## 2. Requirements
+### 2.1. Circuit
 Wire up the distance sensor and the LED with the Pico. 
 Make sure these components are functional.
 
@@ -62,7 +63,8 @@ Make sure these components are functional.
 > [!TIP]
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
 
-### Pico Messenger
+
+### 2.2. Pico Messenger
 - Send the latest detected distance to the computer at the frequency of 50Hz.
 Please round the distance value to 4 decimal places.
 - Receive message from the computer the USB line is occupied (should be receiving a message every 5 seconds).
@@ -72,7 +74,8 @@ Please round the distance value to 4 decimal places.
 > [!TIP]
 > You may want to save the MicroPython script as `main.py` or the Python shell in Thonny will take over the serial line and prevent your Python script chatting with Pico.
 
-### Computer Messenger
+
+### 2.3. Computer Messenger
 - Send LED control message at the frequency of 5Hz.
 Toggle the state of the LED in each outgoing message.
   - Print outgoing message with time stamp (keep 2 decimals in seconds) for debugging.
@@ -81,6 +84,19 @@ Toggle the state of the LED in each outgoing message.
 
 > [!TIP]
 > Plug in the `main.py` loaded Pico, then execute the Python script.
+
+
+### 2.4. Data Transfer Limit
+Let's assume the serial data transfer baudrate is set to your Bear ID number.
+What would be the fastest rate/frequency you can use to repeatedly send the message below?
+
+```text
+I ♥️ UCA! Go Bears!
+```
+
+> [!NOTE]
+> Please document your reasoning and calculation in [README](README.md).
+
 
 ## AI Policies
 
