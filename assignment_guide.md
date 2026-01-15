@@ -21,7 +21,7 @@ In this assignment, you will build that nervous system for your robot by setting
 | **Raspberry Pi Pico** | 1 | Microcontroller dev board (the spinal cord) |
 | **HC-SR04 Module** | 1 | Ultrasonic distance sensor |
 | **(Optional) LED** | 1 | 5mm LED |
-| **(Optional) Resistor** | Sevral | limit current, divide voltage |
+| **(Optional) Resistor** | Several | limit current, divide voltage |
 | **(Optional) Jumper Wires** | Several |  |
 | **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
 | **(Optional) Breadboard** | 1 | Host the circuit |
@@ -80,23 +80,24 @@ Please round the distance value to 4 decimal places.
 - (15%) Send LED control message at the frequency of 5Hz.
 Toggle the state of the LED in each outgoing message using either "on" or "off".
 - (15%) Receive message from Pico whenever the USB line is not empty (should be receiving a message every 20 milliseconds).
+Print out each received message (sensed distance) with the time stamp (round to keep 2 decimal places in seconds).
 
 > [!TIP]
 > - You can use the [computer_chatter.py](computer_chatter.py) to get started.
 > - Plug in the `main.py` loaded Pico, then execute the Python script.
 > - Print outgoing message with time stamp for debugging the computer talker.
-> - Print each received message with the time stamp for debugging the Pico talker.
 
 ### 2.4. (15%) Data Transfer Limit
-Let's assume you are setting up the communication between two devices using the the universal asynchronous receiver-transmitter (UART) protocal.
+Let's assume you are setting up the communication between two devices using  the universal asynchronous receiver-transmitter (UART) protocol.
 The baudrate of this communication is set to **first 5 digits of your Bear ID number (starting at 1)**.
 - Please do your research, find out how many bits are required to send 1 byte of data under the UART protocol.
 - Based on your finding, what would be the fastest rate/frequency you can use to repeatedly send the message below using the [UTF-8](https://www.charset.org/utf-8)?
-- Please document your reasoning and calculation in [README](README.md)
   
-```text
-I ♥️ UCA! Go Bears!
-```
+  ```text
+  I ♥️ UCA! Go Bears!
+  ```
+- Please document your reasoning and calculation in [README](README.md)
+
 
 > [!TIP]
 > - UTF-8 encodes whitespaces.
