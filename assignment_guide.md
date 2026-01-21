@@ -12,9 +12,9 @@ In this assignment, you will build that nervous system for your robot by setting
 - Develope a MicroPython script on Pico to transmit data to and receive data from the computer.
 - Develop a Python script on your computer to transmit data to and receive data from Pico.
 
-## Get Started
+## 2. Get Started
 
-### 1.1. List of Hardware:
+### 2.1. List of Hardware:
 | Item | Quantity | Description |
 | :--- | :---: | :--- |
 | **Computer** | 1 | Desktop/Laptop/SBC (the brain) |
@@ -26,7 +26,7 @@ In this assignment, you will build that nervous system for your robot by setting
 | **(Optional) USB Cable** | 1 | Micro-USB to USB-A (Data capable) |
 | **(Optional) Breadboard** | 1 | Host the circuit |
 
-### 1.2. Prepare the Software
+### 2.2. Prepare the Software
 - Python3: install it on your computer (The linux laptop and Raspberry Pi 5 came with it).
 - [Thonny IDE](https://thonny.org/) or [VS Code](https://code.visualstudio.com/): Python coding environment on the computer.
 - [MicroPython firmware](https://micropython.org/download/RPI_PICO2/): on Pico(2).
@@ -43,12 +43,12 @@ In another case, if "_`serial` is not found_" prompted, then you are very likely
 sudo usermod -aG dialout $USER
 ```
 
-### 1.3. Plan Communication Speed
+### 2.3. Plan Communication Speed
 Please read the following section to figure out the speed of the communication and plan the schedule accordingly.
 In the end, you can also practice planning the overall communication rate using the UART protocal.
 
-## 2. Requirements
-### 2.1. (20%) Circuit
+## 3. Requirements
+### 3.1. (20%) Circuit
 Wire up the distance sensor and the LED with the Pico. 
 Make sure these components are functional.
 
@@ -64,7 +64,7 @@ Make sure these components are functional.
 > If wires are tangled in your mind, please review previous [slides](https://linzhanguca.github.io/robotics1-2025).
 
 
-### 2.2. (35%) Pico Messenger
+### 3.2. (35%) Pico Messenger
 - Send the latest detected distance to the computer at the frequency of 50Hz.
 Please round the distance value to 4 decimal places.
 - Receive message from the computer the USB line is occupied (should be receiving a message every 5 seconds).
@@ -76,7 +76,7 @@ Please round the distance value to 4 decimal places.
 > - You may want to save the MicroPython script as `main.py` or the Python shell in Thonny will take over the serial line and prevent your Python script chatting with Pico.
 
 
-### 2.3. (30%) Computer Messenger
+### 3.3. (30%) Computer Messenger
 - (15%) Send LED control message at the frequency of 5Hz.
 Toggle the state of the LED in each outgoing message using either "on" or "off".
 - (15%) Receive message from Pico whenever the USB line is not empty (should be receiving a message every 20 milliseconds).
@@ -87,7 +87,7 @@ Print out each received message (sensed distance) with the time stamp (round to 
 > - Plug in the `main.py` loaded Pico, then execute the Python script.
 > - Print outgoing message with time stamp for debugging the computer talker.
 
-### 2.4. (15%) Data Transfer Limit
+### 3.4. (15%) Data Transfer Limit
 Let's assume you are setting up the communication between two devices using  the universal asynchronous receiver-transmitter (UART) protocol.
 The baudrate of this communication is set to **first 5 digits of your Bear ID number (starting at 1)**.
 - Please do your research, find out how many bits are required to send 1 byte of data under the UART protocol.
@@ -103,6 +103,6 @@ The baudrate of this communication is set to **first 5 digits of your Bear ID nu
 > - UTF-8 encodes whitespaces.
 > - [Emojis](https://gist.github.com/rxaviers/7360908) are encoded differently.
 
-## AI Policies
+### 3.5. AI Policies
 
 Please acknowledge AI's contributions according to the policies in the syllabus.
